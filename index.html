@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Darnel Misic - International R&B, recording artist</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- Font Awesome 6 (Latest) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="icon" href="/img/favicon/favicon.ico" type="image/x-icon" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="img/favicon/site.webmanifest" />
+    <meta name="theme-color" content="#ffffff" />
+    <style>
+      body,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Montserrat", sans-serif;
+      }
+      .w3-row-padding img {
+        margin-bottom: 12px;
+      }
+      .bgimg {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url("img/celeb.jpg");
+        min-height: 100%;
+      }
+      .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 1000;
+        justify-content: center;
+        align-items: center;
+      }
+      .modal-content {
+        background-color: white;
+        padding: 25px;
+        border-radius: 8px;
+        width: 80%;
+        max-width: 500px;
+        position: relative;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        animation: fadeIn 0.3s ease-out;
+      }
+      .close-btn {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        font-size: 24px;
+        cursor: pointer;
+        color: #777;
+        background: none;
+        border: none;
+        transition: color 0.2s;
+      }
+      .close-btn:hover {
+        color: #333;
+      }
+      #openModalBtn {
+        padding: 10px 20px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s;
+      }
+
+      #openModalBtn:hover {
+        background-color: #45a049;
+      }
+
+      /* Animation */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Sidebar with image -->
+    <nav class="w3-sidebar w3-hide-medium w3-hide-small" style="width: 40%">
+      <div class="bgimg"></div>
+    </nav>
+
+    <!-- Hidden Sidebar (reveals when clicked on menu icon)-->
+    <nav
+      class="w3-sidebar w3-black w3-animate-right w3-xxlarge"
+      style="display: none; padding-top: 150px; right: 0; z-index: 2"
+      id="mySidebar"
+    >
+      <a
+        href="javascript:void(0)"
+        onclick="closeNav()"
+        class="w3-button w3-black w3-xxxlarge w3-display-topright"
+        style="padding: 0 12px"
+      >
+        <i class="fa fa-remove"></i>
+      </a>
+      <div class="w3-bar-block w3-center">
+        <a
+          href="#"
+          class="w3-bar-item w3-button w3-text-grey w3-hover-black"
+          onclick="closeNav()"
+          >Home</a
+        >
+        <a
+          href="#tickets"
+          class="w3-bar-item w3-button w3-text-grey w3-hover-black"
+          onclick="closeNav()"
+          >Tickets</a
+        >
+        <a
+          href="#shop"
+          class="w3-bar-item w3-button w3-text-grey w3-hover-black"
+          onclick="closeNav()"
+          >Shop</a
+        >
+        <a
+          href="#fancard"
+          class="w3-bar-item w3-button w3-text-grey w3-hover-black"
+          onclick="closeNav()"
+          >Fan Card</a
+        >
+        <a
+          href="#contact"
+          class="w3-bar-item w3-button w3-text-grey w3-hover-black"
+          onclick="closeNav()"
+          >Contact</a
+        >
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="w3-main w3-padding-large" style="margin-left: 40%">
+      <!-- Menu icon to open sidebar -->
+      <span
+        class="w3-button w3-top w3-white w3-xxlarge w3-text-grey w3-hover-text-black"
+        style="width: auto; right: 0"
+        onclick="openNav()"
+        ><i class="fa fa-bars"></i
+      ></span>
+
+      <!-- Header -->
+      <header
+        class="w3-container w3-center"
+        style="padding: 128px 16px"
+        id="home"
+      >
+        <h1 class="w3-jumbo"><b>Darnel Misic</b></h1>
+        <p>
+          International R&B, recording artist. Originally from the R&B Quartet
+        </p>
+        <img
+          src="img/celeb.jpg"
+          class="w3-image w3-hide-large w3-hide-small w3-round"
+          style="display: block; width: 60%; margin: auto"
+        />
+        <img
+          src="img/celeb.jpg"
+          class="w3-image w3-hide-large w3-hide-medium w3-round"
+          width="1000"
+          height="1333"
+        />
+      </header>
+
+      <!-- Shows Section -->
+      <div
+        class="w3-content w3-justify w3-text-grey w3-padding-32"
+        id="tickets"
+      >
+        <!-- Grid for pricing tables -->
+        <h3 class="w3-padding-16">Upcoming Shows</h3>
+        <div class="w3-row-padding" style="margin: 0 -16px">
+          <div class="w3-half w3-margin-bottom">
+            <ul class="w3-ul w3-center w3-card w3-hover-shadow">
+              <li class="w3-dark-grey w3-xlarge w3-padding-32">
+                21st Sat <br />Jun
+              </li>
+              <li class="w3-padding-16">
+                8:00 PM in 435 S. Grand Central PKWY
+              </li>
+              <li class="w3-padding-16">Las Vegas, NY 89106</li>
+              <li class="w3-padding-16">
+                <h2>$ 80</h2>
+              </li>
+              <li class="w3-light-grey w3-padding-24">
+                <button
+                  class="w3-button w3-white w3-padding-large w3-hover-black popup-trigger"
+                  data-content="$80"
+                >
+                  Buy Tickets
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <div class="w3-half">
+            <ul
+              class="w3-ul w3-center w3-card w3-hover-shadow w3-margin-bottom"
+            >
+              <li class="w3-dark-grey w3-xlarge w3-padding-32">
+                25th Fri <br />Jul
+              </li>
+              <li class="w3-padding-16">
+                Redondo Beach Performing Arts Center
+              </li>
+              <li class="w3-padding-16">8:00 PM in Redondo Beach, CA</li>
+              <li class="w3-padding-16">
+                <h2>$ 120</h2>
+              </li>
+              <li class="w3-light-grey w3-padding-24">
+                <button
+                  class="w3-button w3-white w3-padding-large w3-hover-black popup-trigger"
+                  data-content="$120"
+                >
+                  Buy Tickets
+                </button>
+              </li>
+            </ul>
+          </div>
+          <!-- End Grid/Pricing tables -->
+        </div>
+
+        <!-- End About Section -->
+      </div>
+
+      <!-- Shop Section -->
+      <div class="w3-content w3-justify w3-text-grey w3-padding-32" id="shop">
+        <!-- Cloth -->
+        <h3 class="w3-padding-16">Shop</h3>
+        <div class="w3-row-padding" style="margin: 0 -16px">
+          <div class="w3-half w3-margin-bottom">
+            <div
+              class="w3-ul w3-center w3-card w3-hover-shadow popup-trigger"
+              style="cursor: pointer"
+              data-content="$200"
+            >
+              <li>
+                <div
+                  style="
+                    width: 100%;
+                    padding-top: 56.25%;
+                    position: relative;
+                    overflow: hidden;
+                  "
+                >
+                  <!-- 16:9 aspect ratio -->
+                  <img
+                    src="img/cloth.jpg"
+                    alt="Blk Hoodie, T-shirt, Trouser, Short and some extra wears"
+                    style="
+                      position: absolute;
+                      top: 0;
+                      left: 0;
+                      width: 100%;
+                      height: 100%;
+                      object-fit: contain;
+                    "
+                  />
+                </div>
+              </li>
+
+              <li class="w3-padding-16">
+                Blk Hoodie, T-shirt, Trouser, Short and some extra wears
+              </li>
+              <li class="w3-padding-16">
+                <h2>$ 200</h2>
+              </li>
+            </div>
+          </div>
+
+          <!-- Music1 -->
+          <div class="w3-half w3-margin-bottom">
+            <div
+              class="w3-ul w3-center w3-card w3-hover-shadow popup-trigger"
+              style="cursor: pointer"
+              data-content="$40"
+            >
+              <li>
+                <div
+                  style="
+                    width: 100%;
+                    padding-top: 56.25%;
+                    position: relative;
+                    overflow: hidden;
+                  "
+                >
+                  <!-- 16:9 aspect ratio -->
+                  <img
+                    src="img/music_cover1.jpg"
+                    alt="Amazing by Darnel Alexander"
+                    style="
+                      position: absolute;
+                      top: 0;
+                      left: 0;
+                      width: 100%;
+                      height: 100%;
+                      object-fit: contain;
+                    "
+                  />
+                </div>
+              </li>
+
+              <li class="w3-padding-16">Amazing by Darnel Alexander</li>
+              <br />
+              <li class="w3-padding-16">
+                <h2>$ 40</h2>
+              </li>
+            </div>
+          </div>
+
+          <!-- Music2 -->
+          <div class="w3-half w3-margin-bottom">
+            <div
+              class="w3-ul w3-center w3-card w3-hover-shadow popup-trigger"
+              style="cursor: pointer"
+              data-content="$40"
+            >
+              <li>
+                <div
+                  style="
+                    width: 100%;
+                    padding-top: 56.25%;
+                    position: relative;
+                    overflow: hidden;
+                  "
+                >
+                  <!-- 16:9 aspect ratio -->
+                  <img
+                    src="img/music_cover2.jpg"
+                    alt="What If by Darnel Alexander"
+                    style="
+                      position: absolute;
+                      top: 0;
+                      left: 0;
+                      width: 100%;
+                      height: 100%;
+                      object-fit: contain;
+                    "
+                  />
+                </div>
+              </li>
+
+              <li class="w3-padding-16">What If by Darnel Alexander</li>
+              <li class="w3-padding-16">
+                <h2>$ 40</h2>
+              </li>
+            </div>
+          </div>
+          <!-- End Grid/Pricing tables -->
+        </div>
+
+        <!-- End About Section -->
+      </div>
+      <hr class="w3-opacity" />
+
+      <!-- Fan Card Section -->
+      <div class="w3-padding-32 w3-content" id="fancard">
+        <h2>Exclusive Fan Club</h2>
+        <h2>Subscribe to Darnel's Fan Club Today!</h2>
+        <div class="w3-row-padding" style="margin: 0 -16px">
+          <div class="w3-center">
+            <h4 class="w3-text-grey">
+              For just $150 a year you can join Darnel Alexander's Exclusive Fan
+              Club and become a part of his inner circle!
+            </h4>
+          </div>
+
+          <div class="w3-center">
+            <h4 class="w3-text-grey">
+              As a Fan Club Member you'll receive a range of amazing benefits
+              that are sure to leave you feeling connected to one of
+              Washington's most beloved R&B music stars.
+            </h4>
+          </div>
+
+          <div class="w3-center">
+            <h4>Exclusive Fan Card</h4>
+            <h4>Limited Edition Signed Posters</h4>
+            <h4>Quarterly Newsletter</h4>
+            <h4>
+              Behind-the-scenes access to Darnel Alexander's Life on the road &
+              at home.
+            </h4>
+            <h4>
+              Monthly Recording of Darnel singing one of his favourite songs.
+            </h4>
+
+            <br />
+            <h4>Limited Availability</h4>
+            <h4 class="w3-text-grey">
+              With only a few selected slots available in Darnel's Exclusive Fan
+              Club, don't miss the opportunity to join today!
+            </h4>
+            <button
+              class="w3-button w3-light-grey w3-padding-large w3-section popup-trigger"
+              data-content="$150"
+            >
+              Join Today!
+            </button>
+          </div>
+
+          <div class="w3-center">
+            <h5
+              class="w3-text-grey popup-trigger"
+              data-content="$200"
+              style="cursor: pointer"
+            >
+              Happy Birthday video request $200
+            </h5>
+          </div>
+        </div>
+      </div>
+
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <button class="close-btn">&times;</button>
+          <h2 class="w3-center">Fee: <span></span></h2>
+          <h6>Deposit <span></span> worth of $BTC to this address!</h6>
+          <p>
+            <span id="copy">bc1qk7w4rczf5q8ltquehyrzuuzr3wltrz27j9x5ed</span> -
+            <span
+              id="copy-span"
+              style="cursor: pointer; color: blue; text-decoration: underline"
+            >
+              copy
+            </span>
+            <span
+              id="copy-status"
+              style="margin-left: 5px; color: green; display: none"
+            >
+              ✓ Copied!
+            </span>
+          </p>
+          <div
+            style="
+              width: 100%;
+              padding-top: 56.25%;
+              position: relative;
+              overflow: hidden;
+            "
+          >
+            <!-- 16:9 aspect ratio -->
+            <img
+              src="img/qr.jpg"
+              alt="What If by Darnel Alexander"
+              style="
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+              "
+            />
+          </div>
+          <p class="w3-center">
+            Important! Make sure to send the exact amount in one transaction.
+          </p>
+          <p class="w3-center">
+            Send Proof <a href="mailto:spreadllovee@gmail.com">HERE</a>
+          </p>
+        </div>
+      </div>
+
+      <!-- Contact Section -->
+      <div
+        class="w3-padding-32 w3-content w3-text-grey"
+        id="contact"
+        style="margin-bottom: 64px"
+      >
+        <h2>Contact Me</h2>
+        <hr class="w3-opacity" />
+
+        <div class="w3-section">
+          <p>
+            <i
+              class="fas fa-map-marker-alt fa-fw w3-xxlarge w3-margin-right"
+            ></i>
+            Seattle, Washington
+          </p>
+          <!-- <p>
+            <i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone:
+            +00 151515
+          </p> -->
+          <p>
+            <i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i>
+            Email:
+            <a href="mailto:spreadllovee@gmail.com">spreadllovee@gmail.com</a>
+          </p>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer
+        class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xlarge"
+        style="margin: -24px"
+      >
+        <a
+          href="https://www.tiktok.com/@darnelalexandermusicc?_t=ZN-8w0x1MOXMww&_r=1"
+          target="_blank"
+          ><i class="fab fa-tiktok w3-hover-opacity" title="TikTok"></i
+        ></a>
+        <a
+          href="https://instagram.com/darnelalexandermusic"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i class="fab fa-instagram w3-hover-opacity" title="Instagram"></i
+        ></a>
+        <a
+          href="https://music.apple.com/us/album/i-will-never-leave-you-single/1566333300"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i class="fas fa-music w3-hover-opacity" title="Apple Music"></i
+        ></a>
+        <a
+          href="https://youtube.com/@darnelalexandermusic?si=u8DrEsFAK2qRtqHA"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i class="fab fa-youtube w3-hover-opacity" title="YouTube"></i
+        ></a>
+        <p class="w3-medium">
+          &copy; <span id="current-year"></span> by Darnel Music. All Rights
+          Reserved.
+        </p>
+        <!-- End footer -->
+      </footer>
+
+      <!-- END PAGE CONTENT -->
+    </div>
+
+    <script>
+      // Open and close sidebar
+      function openNav() {
+        document.getElementById("mySidebar").style.width = "60%";
+        document.getElementById("mySidebar").style.display = "block";
+      }
+
+      function closeNav() {
+        document.getElementById("mySidebar").style.display = "none";
+      }
+
+      const currentYear = new Date().getFullYear();
+      const yearElement = document.getElementById("current-year");
+      yearElement.textContent = currentYear;
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const modal = document.getElementById("myModal");
+        const buttons = document.querySelectorAll(".popup-trigger");
+        const closeBtn = document.querySelector(".close-btn");
+
+        // Add click event to all buttons
+        buttons.forEach((button) => {
+          button.addEventListener("click", function () {
+            const price = this.getAttribute("data-content");
+
+            document.querySelector(".modal-content span").textContent = price;
+            document.querySelector(".modal-content h6 span").textContent =
+              price;
+
+            modal.style.display = "flex";
+            document.body.style.overflow = "hidden";
+          });
+        });
+
+        // Close modal
+        closeBtn.addEventListener("click", function () {
+          modal.style.display = "none";
+          document.body.style.overflow = "auto";
+        });
+
+        // Close when clicking outside modal content
+        modal.addEventListener("click", function (e) {
+          if (e.target === modal) {
+            modal.style.display = "none";
+            document.body.style.overflow = "auto";
+          }
+        });
+
+        // Close with Escape key
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape" && modal.style.display === "flex") {
+            modal.style.display = "none";
+            document.body.style.overflow = "auto";
+          }
+        });
+      });
+
+      document
+        .getElementById("copy-span")
+        .addEventListener("click", async () => {
+          const textToCopy = document.getElementById("copy").innerText;
+
+          try {
+            await navigator.clipboard.writeText(textToCopy);
+            // Show checkmark feedback
+            const status = document.getElementById("copy-status");
+            status.style.display = "inline";
+            setTimeout(() => (status.style.display = "none"), 2000);
+          } catch (err) {
+            console.error("Failed to copy:", err);
+            status.textContent = "Failed to copy!";
+            status.style.color = "red";
+            status.style.display = "inline";
+          }
+        });
+    </script>
+  </body>
+</html>
